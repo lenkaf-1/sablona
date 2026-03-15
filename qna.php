@@ -44,6 +44,6 @@
 <script src="js/accordion.js"></script>
 <script src="js/menu.js"></script>
 </body>
- <?php  $file_path = "parts/footer.php"; if(!include($file_path)) {     echo"Failed to include $file_path";} ?>
+ <?php  $file_path = "parts/header.php"; if(!include($file_path)) {     echo"Failed to include $file_path";} ?>
  <?php  $file_path = "parts/footer.php"; if(!include($file_path)) {     echo"Failed to include $file_path";} ?>
 </html>
