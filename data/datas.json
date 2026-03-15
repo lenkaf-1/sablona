@@ -1,7 +1,52 @@
 {
-  "text_banner": {
-    "banner1.jpg": "Prvý nadpis",
-    "banner2.jpg": "Druhý nadpis",
-    "banner3.jpg": "Tretí nadpis"
-  }
+  "portfolio": [
+    {
+      "img": "img/portfolio/portfolio1.jpg",
+      "title": "Web stránka 1",
+      "desc": "Popis projektu 1",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio2.jpg",
+      "title": "Web stránka 2",
+      "desc": "Popis projektu 2",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio3.jpg",
+      "title": "Web stránka 3",
+      "desc": "Popis projektu 3",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio4.jpg",
+      "title": "Web stránka 4",
+      "desc": "Popis projektu 4",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio5.jpg",
+      "title": "Web stránka 5",
+      "desc": "Popis projektu 5",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio6.jpg",
+      "title": "Web stránka 6",
+      "desc": "Popis projektu 6",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio7.jpg",
+      "title": "Web stránka 7",
+      "desc": "Popis projektu 7",
+      "link": "#"
+    },
+    {
+      "img": "img/portfolio/portfolio8.jpg",
+      "title": "Web stránka 8",
+      "desc": "Popis projektu 8",
+      "link": "#"
+    }
+  ]
 }
