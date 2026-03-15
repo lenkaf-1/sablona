@@ -59,6 +59,6 @@
     <script src="js/menu.js"></script>
     <script src="js/slider.js"></script>
 </body>
- <?php  $file_path = "parts/footer.php"; if(!include($file_path)) {     echo"Failed to include $file_path";} ?>
+ <?php  $file_path = "parts/header.php"; if(!include($file_path)) {     echo"Failed to include $file_path";} ?>
  <?php  $file_path = "parts/footer.php"; if(!include($file_path)) {     echo"Failed to include $file_path";} ?>
 </html>
