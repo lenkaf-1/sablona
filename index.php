@@ -55,6 +55,7 @@
         <a id="next" class="next">❯</a>
         
       </section>
+      <?php echo "<h1>Hello world</h1>";echo "Dnes je " . date("d.m.Y") . "<br>";echo "Aktuálny čas je " . date("H:i:s") . "<br>";?>
       <section class="container">
         <div class="row">
           <div class="col-100 text-center">
