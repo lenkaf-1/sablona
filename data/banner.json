@@ -1,0 +1,16 @@
+{
+  "text_banner": {
+    "banner1.jpg": {
+      "text": "Prvý nadpis",
+      "url": "https://google.com"
+    },
+    "banner2.jpg": {
+      "text": "Druhý nadpis",
+      "url": "https://google.com"
+    },
+    "banner3.jpg": {
+      "text": "Tretí nadpis",
+      "url": "https://google.com"
+    }
+  }
+}
