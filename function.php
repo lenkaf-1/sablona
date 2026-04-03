@@ -19,3 +19,30 @@ function generatePortfolio() {
 }
 
 ?>
+
+<?php
+
+function load_banner_data() {
+    $path = "data/banner.json";
+    if (!file_exists($path)) {
+        return null;
+    }
+
+    $json = file_get_contents($path);
+    return json_decode($json, true);
+}
+
+function render_banners() {
+    $data = load_banner_data();
+    if (!$data) return;
+
+    foreach ($data["text_banner"] as $img => $info) {
+        echo '
+        <div class="slide fade" onclick="window.location.href=\'' . $info["url"] . '\'">
+            <img src="img/banners/' . $img . '">
+            <div class="slide-text">' . $info["text"] . '</div>
+        </div>';
+    }
+}
+
+?>
