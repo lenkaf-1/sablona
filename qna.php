@@ -2,10 +2,7 @@
 include "parts/header.php"; 
 include "parts/QnA.php";
 
-$jsonPath = "data/qna.json";
-
-$qnaModel = new QnA($jsonPath);
-
+$qnaModel = new QnA("data/qna.json");
 $qna = $qnaModel->getAll();
 ?>
 
@@ -20,11 +17,14 @@ $qna = $qnaModel->getAll();
     <link rel="stylesheet" href="/sablona/sablona/css/style.css">
     <link rel="stylesheet" href="/sablona/sablona/css/portfolio.css">
     <link rel="stylesheet" href="/sablona/sablona/css/banner.css">
+    <link rel="stylesheet" href="/sablona/sablona/css/accordion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/sablona/sablona/js/accordion.js"></script>
 </head>
 
 <body>
-  <main>
+
+<main>
 
     <section class="banner">
       <div class="container text-white">
@@ -44,21 +44,16 @@ $qna = $qnaModel->getAll();
 
     <section class="container">
 
-      <?php foreach ($qna as $item): ?>
-        <div class="accordion">
-          <div class="question"><?= htmlspecialchars($item['otazka']) ?></div>
-          <div class="answer"><?= nl2br(htmlspecialchars($item['odpoved'])) ?></div>
-        </div>
-      <?php endforeach; ?>
+      <?php renderAccordionItems(); ?>
 
     </section>
 
-  </main>
+</main>
 
-  <script src="js/accordion.js"></script>
-  <script src="js/menu.js"></script>
+<script src="/sablona/sablona/js/accordion.js"></script>
+<script src="/sablona/sablona/js/menu.js"></script>
 
-  <?php include "parts/footer.php"; ?>
+<?php include "parts/footer.php"; ?>
 
 </body>
 </html>

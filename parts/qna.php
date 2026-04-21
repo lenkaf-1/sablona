@@ -1,6 +1,6 @@
 <?php
 
-class QnA {
+class QNA {
 
     private $jsonPath;
 
@@ -27,4 +27,29 @@ class QnA {
         file_put_contents($this->jsonPath, json_encode($data, JSON_PRETTY_PRINT));
     }
     */
+
+    public function renderAccordionItems() {
+        $items = $this->getAll();
+        $html = '';
+        foreach ($items as $item) {
+            $html .= '<div class="accordion">';
+            $html .= '<div class="question">' . htmlspecialchars($item['otazka']) . '</div>';
+            $html .= '<div class="answer">' . htmlspecialchars($item['odpoved']) . '</div>';
+            $html .= '</div>';
+        }
+        return $html;
+    }
+}
+
+function renderAccordionItems() {
+    $qnaModel = new QnA("data/qna.json");
+    $items = $qnaModel->getAll();
+    $html = '';
+    foreach ($items as $item) {
+        $html .= '<div class="accordion qna">';
+        $html .= '<div class="question">' . htmlspecialchars($item['otazka']) . '</div>';
+        $html .= '<div class="answer">' . htmlspecialchars($item['odpoved']) . '</div>';
+        $html .= '</div>';
+    }
+    echo $html;
 }
