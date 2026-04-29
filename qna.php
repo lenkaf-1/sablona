@@ -1,9 +1,13 @@
 <?php  
 include "parts/header.php"; 
-include "parts/QnA.php";
 
-$qnaModel = new QnA("data/qna.json");
-$qna = $qnaModel->getAll();
+require_once __DIR__ . "/triedy/Database.php";
+require_once __DIR__ . "/triedy/QnA.php";
+
+use App\QnA;
+
+$qnaModel = new QnA();  
+$qna = $qnaModel->getAll();  
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +48,18 @@ $qna = $qnaModel->getAll();
 
     <section class="container">
 
-      <?php renderAccordionItems(); ?>
+      <?php 
+        if (!empty($qna) && is_array($qna)) {
+            foreach ($qna as $item) {
+                echo '<div class="accordion qna">';
+                echo '<div class="question">' . htmlspecialchars($item['otazka']) . '</div>';
+                echo '<div class="answer">' . htmlspecialchars($item['odpoved']) . '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p>Žiadne otázky alebo problém so načítaním dát.</p>';
+        }
+      ?>
 
     </section>
 
